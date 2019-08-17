@@ -1,3 +1,9 @@
-<p>
-  heros works!
-</p>
+<div [formGroup]="form">
+  <h2>{{ this.hero.name | uppercase }} Details</h2>
+  <div><span>Id:</span>{{ this.hero.id }}</div>
+  <div><span>Name:</span>{{ this.hero.name }}</div>
+
+  <div>
+    <label>name: <input formControlName="heroName" placeholder="name"/></label>
+  </div>
+</div>
