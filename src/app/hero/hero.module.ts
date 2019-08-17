@@ -5,6 +5,7 @@ import { HeroRoutingModule } from "./hero-routing.module";
 import { HerosComponent } from "./heros/heros.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [HerosComponent],
@@ -12,7 +13,8 @@ import { HttpClientModule } from "@angular/common/http";
     CommonModule,
     HeroRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class HeroModule {}
