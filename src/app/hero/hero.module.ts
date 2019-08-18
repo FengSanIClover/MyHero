@@ -6,9 +6,10 @@ import { HerosComponent } from "./heros/heros.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
-  declarations: [HerosComponent],
+  declarations: [HerosComponent, HeroDetailComponent],
   imports: [
     CommonModule,
     HeroRoutingModule,
