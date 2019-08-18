@@ -8,6 +8,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 // Mission6 Http 更改使用方法
 // 安裝 JSON Server
@@ -22,7 +23,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 // 在 json-server 內啟動，指令 ->  json-server --watch db.json --routes routes.json
 
 @NgModule({
-  declarations: [HerosComponent, HeroDetailComponent, DashboardComponent],
+  declarations: [HerosComponent, HeroDetailComponent, DashboardComponent, HeroSearchComponent],
   imports: [
     CommonModule,
     HeroRoutingModule,
