@@ -8,15 +8,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
-import { HomeComponent } from "./home/home.component";
 
 @NgModule({
-  declarations: [
-    HerosComponent,
-    HeroDetailComponent,
-    DashboardComponent,
-    HomeComponent
-  ],
+  declarations: [HerosComponent, HeroDetailComponent, DashboardComponent],
   imports: [
     CommonModule,
     HeroRoutingModule,
