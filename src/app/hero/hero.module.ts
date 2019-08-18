@@ -6,12 +6,17 @@ import { HerosComponent } from "./heros/heros.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+import { HomeComponent } from "./home/home.component";
 
 @NgModule({
-  declarations: [HerosComponent, HeroDetailComponent, MessagesComponent, DashboardComponent],
+  declarations: [
+    HerosComponent,
+    HeroDetailComponent,
+    DashboardComponent,
+    HomeComponent
+  ],
   imports: [
     CommonModule,
     HeroRoutingModule,
