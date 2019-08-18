@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit } from "@angular/core";
 import { Hero } from "../../models/hero";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { HEROES } from "../../mocks/mock-heroes";
+import { HeroService } from "../../services/hero.service";
 
 @Component({
   selector: "app-heros",
@@ -15,14 +16,16 @@ export class HerosComponent implements OnInit, AfterViewInit {
     name: "Windstorm"
   };
 
-  heroes = HEROES;
+  heroes$: any; //= HEROES;
   selectedHero: Hero;
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private heroService: HeroService) {}
 
   ngOnInit() {
     this.form = this.fb.group({
       heroName: [""]
     });
+
+    this.getHeroes();
   }
 
   ngAfterViewInit(): void {
@@ -36,5 +39,9 @@ export class HerosComponent implements OnInit, AfterViewInit {
 
     // 要擺放在後面，否則會報錯
     this.form.get("heroName").setValue(hero.name);
+  }
+
+  getHeroes() {
+    this.heroes$ = this.heroService.getHeroes();
   }
 }
