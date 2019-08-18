@@ -97,6 +97,13 @@ export class HeroService {
       });
   }
 
+  searchHero() {
+    return this.httpClient.get<Hero[]>(`${this.api}/heroes`).pipe(
+      tap(_ => this.log("fetched heroes")),
+      catchError(this.handleError<Hero[]>(`searchHeroes`, []))
+    );
+  }
+
   private log(message: string) {
     this.messageService.add(`HeroService: ${message}`);
   }

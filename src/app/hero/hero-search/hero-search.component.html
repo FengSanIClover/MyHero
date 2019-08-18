@@ -1,3 +1,13 @@
-<p>
-  hero-search works!
-</p>
+<div [formGroup]="this.form">
+  <h4><label for="search-box">Hero Search</label></h4>
+
+  <input id="search-box" formControlName="heroName" />
+
+  <ul class="search-result">
+    <ng-container *ngIf="heroes$ | async as heroes">
+      <li *ngFor="let hero of heroes">
+        <a routerLink="/hero/detail/{{ hero.id }}">{{ hero.name }}</a>
+      </li>
+    </ng-container>
+  </ul>
+</div>
