@@ -4,11 +4,11 @@ import { Routes, RouterModule } from "@angular/router";
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "Hero",
+    redirectTo: "hero",
     pathMatch: "full"
   },
   {
-    path: "Hero",
+    path: "hero",
     loadChildren: "./hero/hero.module#HeroModule"
   }
 ];

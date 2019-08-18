@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: "",
     component: HerosComponent
+  },
+  {
+    path: "heros",
+    component: HerosComponent
   }
 ];
 
